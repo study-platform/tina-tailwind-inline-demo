@@ -1,14 +1,14 @@
-import * as React from "react";
-import { ThemeContext } from "./theme";
-import { Section, SectionFields } from "./section";
+import * as React from 'react'
+import { ThemeContext } from './theme'
+import { Section, SectionFields } from './section'
 import {
   BlocksControls,
   InlineText,
   InlineTextarea,
-} from "react-tinacms-inline";
+} from 'react-tinacms-inline'
 
 export const Testimonial = ({ data }) => {
-  const theme = React.useContext(ThemeContext);
+  const theme = React.useContext(ThemeContext)
 
   return (
     <Section variant={data.style.color}>
@@ -46,8 +46,8 @@ export const Testimonial = ({ data }) => {
         </div>
       </div>
     </Section>
-  );
-};
+  )
+}
 
 export function TestimonialBlock({ data, index }) {
   return (
@@ -58,35 +58,34 @@ export function TestimonialBlock({ data, index }) {
     >
       <Testimonial data={data} />
     </BlocksControls>
-  );
+  )
 }
 
 export const testimonial_template = {
-  label: "Testimonial",
+  label: '感言',
   defaultItem: {
-    quote:
-      "There are only two hard things in Computer Science: cache invalidation and naming things.",
-    author: "Phil Karlton",
+    quote: '计算机科学领域的两大难题：命名和缓存过期',
+    author: 'Phil Karlton',
     style: {
-      color: "primary",
+      color: 'primary',
     },
   },
   fields: [
     {
-      name: "quote",
-      label: "Quote",
-      component: "textarea",
+      name: 'quote',
+      label: 'Quote',
+      component: 'textarea',
     },
     {
-      name: "author",
-      label: "Author",
-      component: "text",
+      name: 'author',
+      label: 'Author',
+      component: 'text',
     },
     {
-      name: "style",
-      label: "Style",
-      component: "group",
+      name: 'style',
+      label: 'Style',
+      component: 'group',
       fields: [...SectionFields],
     },
   ],
-};
+}

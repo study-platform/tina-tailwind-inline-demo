@@ -148,22 +148,14 @@ export const FooterNavBlock = ({ index, data }) => {
 export const footer_nav_template = {
   label: 'Footer Nav',
   defaultItem: {
-    title: 'Product',
+    title: '产品',
     items: [
       {
-        label: 'Form Templates',
-        link: '#',
+        label: '链接 1',
+        link: '',
       },
       {
-        label: 'Landing Page',
-        link: '#',
-      },
-      {
-        label: 'Figma Files',
-        link: '#',
-      },
-      {
-        label: 'Background Info',
+        label: '链接 2',
         link: '#',
       },
     ],

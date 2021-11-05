@@ -1,15 +1,15 @@
-import * as React from "react";
-import { ThemeContext } from "./theme";
+import * as React from 'react'
+import { ThemeContext } from './theme'
 import {
   InlineGroup,
   BlocksControls,
   InlineTextarea,
-} from "react-tinacms-inline";
-import { ACTION_FIELDS, Actions } from "./actions";
-import { Section, SectionFields } from "./section";
+} from 'react-tinacms-inline'
+import { ACTION_FIELDS, Actions } from './actions'
+import { Section, SectionFields } from './section'
 
 export const Hero = ({ data }) => {
-  const theme = React.useContext(ThemeContext);
+  const theme = React.useContext(ThemeContext)
 
   return (
     <Section variant={data.style.color}>
@@ -22,7 +22,7 @@ export const Hero = ({ data }) => {
             <h3
               className={`w-full relative	mb-6 text-5xl font-extrabold tracking-normal text-left title-font`}
             >
-              {data.style.color === "primary" ? (
+              {data.style.color === 'primary' ? (
                 <span
                   className={`absolute z-20 pointer-events-none w-full top-0 -bottom-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-gray-800`}
                   style={{
@@ -68,8 +68,8 @@ export const Hero = ({ data }) => {
         </div>
       </div>
     </Section>
-  );
-};
+  )
+}
 
 export function HeroBlock({ data, index }) {
   return (
@@ -80,87 +80,86 @@ export function HeroBlock({ data, index }) {
     >
       <Hero data={data} />
     </BlocksControls>
-  );
+  )
 }
 
 export const IMAGE_FIELDS = [
   {
-    name: "src",
-    label: "Image Source",
-    component: "text",
+    name: 'src',
+    label: 'Image Source',
+    component: 'text',
   },
   {
-    name: "alt",
-    label: "Alt Text",
-    component: "text",
+    name: 'alt',
+    label: 'Alt Text',
+    component: 'text',
   },
-];
+]
 
 export const hero_template = {
-  label: "Hero",
+  label: '主页横幅',
   defaultItem: {
-    tagline: "TAGLINE ABOVE TEXT",
-    headline: "This is a large display heading.",
-    text:
-      "Give your team a contextual, intuitive editing experience without sacrificing code quality.",
+    tagline: '数秒内即可部署一个 Next.js 应用',
+    headline: '为生产环境而生的 React 框架',
+    text: 'Next.js 为你提供最佳开发体验，拥有所有你想要的功能：混合、服务端渲染，TypeScript 支持，智能打包构建，路由预取等等。零配置，开箱即用。',
     image: {
-      src: "/canal.jpg",
-      alt: "Photo from Unsplash",
+      src: '/nextjs.png',
+      alt: 'Next.js',
     },
     actions: [
       {
-        label: "Primary Action",
-        type: "button",
-        icon: "true",
+        label: '开始学习',
+        type: 'button',
+        icon: 'true',
       },
       {
-        label: "Learn More",
-        type: "link",
+        label: '文档',
+        type: 'link',
       },
     ],
     style: {
-      color: "tint",
+      color: 'tint',
     },
   },
   fields: [
     {
-      name: "",
-      label: "Text",
-      component: "group",
+      name: '',
+      label: 'Text',
+      component: 'group',
       fields: [...SectionFields],
     },
     {
-      name: "image",
-      label: "Image",
-      component: "group",
+      name: 'image',
+      label: 'Image',
+      component: 'group',
       fields: IMAGE_FIELDS,
     },
     ...ACTION_FIELDS,
     {
-      name: "style",
-      label: "Style",
-      component: "group",
+      name: 'style',
+      label: 'Style',
+      component: 'group',
       fields: [
         {
-          name: "color",
-          label: "Color",
-          component: "select",
+          name: 'color',
+          label: 'Color',
+          component: 'select',
           options: [
             {
-              label: "Default",
-              value: "default",
+              label: 'Default',
+              value: 'default',
             },
             {
-              label: "Tint",
-              value: "tint",
+              label: 'Tint',
+              value: 'tint',
             },
             {
-              label: "Primary",
-              value: "primary",
+              label: 'Primary',
+              value: 'primary',
             },
           ],
         },
       ],
     },
   ],
-};
+}
