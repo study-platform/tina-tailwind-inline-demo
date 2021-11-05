@@ -1,15 +1,21 @@
-import * as React from "react";
-import { ThemeContext } from "./theme";
+import * as React from 'react'
+import { ThemeContext } from './theme'
 import {
   InlineBlocks,
   InlineGroup,
   BlocksControls,
   InlineTextarea,
-} from "react-tinacms-inline";
-import { FaInstagram, FaFacebookF, FaTwitter, FaGithub } from "react-icons/fa";
+} from 'react-tinacms-inline'
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaSuperscript,
+  FaTwitter,
+  FaGithub,
+} from 'react-icons/fa'
 
-export const Footer = ({ data, name = "" }) => {
-  const theme = React.useContext(ThemeContext);
+export const Footer = ({ data, name = '' }) => {
+  const theme = React.useContext(ThemeContext)
 
   return (
     <footer className="text-white bg-gradient-to-br from-gray-700 to-gray-800 dark:from-gray-900 dark:to-gray-800 body-font">
@@ -42,12 +48,12 @@ export const Footer = ({ data, name = "" }) => {
           >
             <span
               className={`absolute opacity-30 w-2/3 h-64 bg-${theme.color}-500 -bottom-48 rounded-t-full`}
-              style={{ filter: "blur(10rem)" }}
+              style={{ filter: 'blur(10rem)' }}
             ></span>
           </div>
           <div
             className={`relative w-full opacity-90 z-10 bg-gradient-to-r from-gray-800 via-${theme.color}-400 to-gray-800`}
-            style={{ height: "3px" }}
+            style={{ height: '3px' }}
           ></div>
           <div className="bg-gray-800 dark:bg-gray-900 z-0 relative">
             <div className="container flex flex-col flex-wrap p-7 mx-auto sm:flex-row justify-center">
@@ -69,7 +75,7 @@ export const Footer = ({ data, name = "" }) => {
                     target="_blank"
                     className="mx-2"
                   >
-                    <FaTwitter
+                    <FaSuperscript
                       className={`h-6 w-auto text-white hover:text-${theme.color}-500`}
                     />
                   </a>
@@ -98,11 +104,11 @@ export const Footer = ({ data, name = "" }) => {
         </div>
       </InlineGroup>
     </footer>
-  );
-};
+  )
+}
 
 export const FooterNavBlock = ({ index, data }) => {
-  const theme = React.useContext(ThemeContext);
+  const theme = React.useContext(ThemeContext)
 
   return (
     <div className="flex-grow px-6">
@@ -131,34 +137,34 @@ export const FooterNavBlock = ({ index, data }) => {
                     {item.label}
                   </a>
                 </li>
-              );
+              )
             })}
         </nav>
       </BlocksControls>
     </div>
-  );
-};
+  )
+}
 
 export const footer_nav_template = {
-  label: "Footer Nav",
+  label: 'Footer Nav',
   defaultItem: {
-    title: "Product",
+    title: 'Product',
     items: [
       {
-        label: "Form Templates",
-        link: "#",
+        label: 'Form Templates',
+        link: '#',
       },
       {
-        label: "Landing Page",
-        link: "#",
+        label: 'Landing Page',
+        link: '#',
       },
       {
-        label: "Figma Files",
-        link: "#",
+        label: 'Figma Files',
+        link: '#',
       },
       {
-        label: "Background Info",
-        link: "#",
+        label: 'Background Info',
+        link: '#',
       },
     ],
   },
@@ -167,45 +173,45 @@ export const footer_nav_template = {
   }),
   fields: [
     {
-      name: "title",
-      label: "Title",
-      component: "text",
+      name: 'title',
+      label: 'Title',
+      component: 'text',
     },
     {
-      name: "items",
-      label: "Nav Items",
-      component: "group-list",
+      name: 'items',
+      label: 'Nav Items',
+      component: 'group-list',
       itemProps: (item) => ({
         label: item.label,
       }),
       fields: [
         {
-          name: "label",
-          label: "Label",
-          component: "text",
+          name: 'label',
+          label: 'Label',
+          component: 'text',
         },
         {
-          name: "link",
-          label: "Link",
-          component: "text",
+          name: 'link',
+          label: 'Link',
+          component: 'text',
         },
       ],
     },
   ],
-};
+}
 
 const FOOTER_BLOCKS = {
   nav: {
     Component: FooterNavBlock,
     template: footer_nav_template,
   },
-};
+}
 
 export const FOOTER_FIELDS = [
   {
-    label: "Nav List",
-    name: "navlist",
-    component: "blocks",
+    label: 'Nav List',
+    name: 'navlist',
+    component: 'blocks',
     itemProps: (item) => ({
       label: item.title,
     }),
@@ -214,30 +220,30 @@ export const FOOTER_FIELDS = [
     },
   },
   {
-    name: "social",
-    label: "Social Media",
-    component: "group",
+    name: 'social',
+    label: 'Social Media',
+    component: 'group',
     fields: [
       {
-        name: "facebook",
-        label: "Facebook",
-        component: "text",
+        name: 'facebook',
+        label: 'Facebook',
+        component: 'text',
       },
       {
-        name: "twitter",
-        label: "Twitter",
-        component: "text",
+        name: 'twitter',
+        label: 'Twitter',
+        component: 'text',
       },
       {
-        name: "instagram",
-        label: "Instagram",
-        component: "text",
+        name: 'instagram',
+        label: 'Instagram',
+        component: 'text',
       },
       {
-        name: "github",
-        label: "Github",
-        component: "text",
+        name: 'github',
+        label: 'Github',
+        component: 'text',
       },
     ],
   },
-];
+]

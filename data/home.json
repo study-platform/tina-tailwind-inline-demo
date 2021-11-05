@@ -1,47 +1,47 @@
 {
   "nav": {
     "wordmark": {
-      "name": "Company Name",
+      "name": "演示文案译自 Nextjs 官网",
       "icon": {
         "color": "primary",
-        "name": "FiAperture",
+        "name": "BiCodeBlock",
         "style": "float",
         "size": "small"
       }
     },
     "items": [
       {
-        "label": "Pricing",
-        "link": "/"
+        "label": "文档",
+        "link": "https://nextjs.org/docs/getting-started"
       },
       {
-        "label": "Contact",
-        "link": "/"
+        "label": "成功案例",
+        "link": "https://nextjs.org/showcase"
       },
       {
-        "label": "Services",
-        "link": "/"
+        "label": "数据分析",
+        "link": "https://nextjs.org/analytics"
       }
     ]
   },
   "blocks": [
     {
       "_template": "hero",
-      "tagline": "TAGLINE ABOVE TEXT",
-      "headline": "This is a large display heading.",
-      "text": "Give your team a contextual, intuitive editing experience without sacrificing code quality. Unlock your team with next-gen editing.",
+      "tagline": "数秒内即可部署一个 Next.js 应用",
+      "headline": "为生产环境而生的 React 框架",
+      "text": "Next.js 为你提供最佳开发体验，拥有所有你想要的功能：混合、服务端渲染，TypeScript 支持，智能打包构建，路由预取等等。零配置，开箱即用。",
       "image": {
-        "src": "/canal.jpg",
-        "alt": "Photo from Unsplash"
+        "src": "/nextjs.png",
+        "alt": "Next.js"
       },
       "actions": [
         {
-          "label": "Primary Action",
+          "label": "开始学习",
           "type": "button",
           "icon": "true"
         },
         {
-          "label": "Learn More",
+          "label": "文档",
           "type": "link"
         }
       ],
@@ -59,11 +59,11 @@
             "name": "BiCoffeeTogo",
             "style": "circle"
           },
-          "title": "Amazing Feature",
-          "text": "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
+          "title": "零配置",
+          "text": "开箱即用的项目配置，为生产环境优化",
           "actions": [
             {
-              "label": "Learn More",
+              "label": "了解更多",
               "type": "link",
               "icon": "true"
             }
@@ -76,11 +76,11 @@
             "name": "BiCloud",
             "style": "circle"
           },
-          "title": "Another Great Thing",
-          "text": "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
+          "title": "混合模式：SSG 和 SSR",
+          "text": "根据数据的属性，开发者可以自由决定使用构建时渲染或者请求时渲染，带来最佳用户体验。",
           "actions": [
             {
-              "label": "Learn More",
+              "label": "了解更多",
               "type": "link",
               "icon": "true"
             }
@@ -93,11 +93,11 @@
             "name": "BiMapAlt",
             "style": "circle"
           },
-          "title": "Three To Round It Out",
-          "text": "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
+          "title": "国际化",
+          "text": "内置基于子域名和路径的的多语言路由，自动检测用户使用语言。",
           "actions": [
             {
-              "label": "Learn More",
+              "label": "了解更多",
               "type": "link",
               "icon": "true"
             }
@@ -111,76 +111,55 @@
   ],
   "footer": {
     "social": {
-      "twitter": "https://twitter.com/tina_cms",
-      "github": "https://github.com/tinacms/tina-tailwind-inline-demo"
+      "twitter": "https://the-team.vercel.app"
     },
     "navlist": [
       {
         "_template": "nav",
-        "title": "Product",
+        "title": "资源",
         "items": [
           {
-            "label": "Form Templates",
+            "label": "文档",
             "link": "#"
           },
           {
-            "label": "Landing Page",
+            "label": "学习",
             "link": "#"
           },
           {
-            "label": "Figma Files",
+            "label": "展示案例",
             "link": "#"
           },
           {
-            "label": "Background Info",
+            "label": "博客",
             "link": "#"
           }
         ]
       },
       {
         "_template": "nav",
-        "title": "Company",
+        "title": "关于我们",
         "items": [
           {
-            "label": "About",
+            "label": "开源软件",
             "link": "#"
           },
           {
-            "label": "Carriers",
+            "label": "Github",
             "link": "#"
           },
           {
-            "label": "Pricing",
-            "link": "#"
-          },
-          {
-            "label": "Security",
-            "link": "#"
-          },
-          {
-            "label": "Contact Us",
+            "label": "Twitter",
             "link": "#"
           }
         ]
       },
       {
         "_template": "nav",
-        "title": "Legal",
+        "title": "法律法规",
         "items": [
           {
-            "label": "Privacy Policy",
-            "link": "#"
-          },
-          {
-            "label": "Terms Of Service",
-            "link": "#"
-          },
-          {
-            "label": "Trademark Policy",
-            "link": "#"
-          },
-          {
-            "label": "Inactivity Policy",
+            "label": "隐私政策",
             "link": "#"
           }
         ]
